@@ -18,8 +18,38 @@
 // 5. Backwards Compatibility
 // 6. Performance Overhead
 
-let promise = new Promise((resolve,reject)=>{
-    resolve('Resolve');
-});
+// Promise is one of the way to handle asynchronous task in JavaScript
 
-console.log(promise);
+// Promise in JavaScript is an object that reprsent eventual completion or failure of an asynchronous operation and resulting its final value.
+
+// Example 1
+
+// const myPromise = new Promise((resolve,reject) =>{
+//     setTimeout(() => {
+//        resolve('success');
+//     }, 2000);
+
+//     setTimeout(() => {
+//         reject('rejected');
+//     }, 3000);
+// })
+// console.log(myPromise);
+
+// ----------------------------------------------------------------
+
+// Example 2
+
+// const myPromise = new Promise((resolve,reject) =>{
+//     let randomNumber = Math.floor(Math.random() * 10);
+//     if(randomNumber > 5){
+//         resolve("Resolve");
+//     }
+//     else{
+//         reject("Reject");
+//     }
+// });
+
+// console.log(myPromise);
+
+// -------------------------------------------------------------------
+
