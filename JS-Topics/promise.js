@@ -55,9 +55,32 @@
 //     })
 //     .catch((error) => {
 //         console.log(error)
-//     })
+//     }).
+//     .finally(() => {
+//     console.log("Finally block");
+// });
 
 // console.log(myPromise);
 
 // -------------------------------------------------------------------
 
+// example of promise using fetch
+
+// let fetchPromise = fetch('https://jsonplaceholder.typicode.com/todos/1')
+//                     .then((data)=>{
+//                         let promise = data.json();
+//                         return promise;
+//                     })
+//                     .then((data) => {
+//                         console.log(data);
+//                     })                
+//                     .catch((error)=>{
+//                         console.log(error)
+//                     })
+//                     .finally(()=>{
+//                         console.log('Finally Block Will be execute');
+//                     });
+
+// console.log(fetchPromise);
+
+// ----------------------------------------------------------------------
