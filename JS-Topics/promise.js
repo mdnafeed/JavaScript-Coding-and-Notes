@@ -39,17 +39,25 @@
 
 // Example 2
 
-// const myPromise = new Promise((resolve,reject) =>{
-//     let randomNumber = Math.floor(Math.random() * 10);
-//     if(randomNumber > 5){
-//         resolve("Resolve");
-//     }
-//     else{
-//         reject("Reject");
-//     }
-// });
+const myPromise = new Promise((resolve,reject) =>{
+    let randomNumber = Math.floor(Math.random() * 10);
+    if(randomNumber > 5){
+        resolve("Resolve");
+    }
+    else{
+        reject("Reject");
+    }
+});
 
-// console.log(myPromise);
+myPromise
+    .then((data)=>{
+        console.log("Updated",data)
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+
+console.log(myPromise);
 
 // -------------------------------------------------------------------
 
