@@ -124,18 +124,18 @@ var promise3 = new Promise((resolve,reject) =>{
     setTimeout(() => resolve('Promise 3 resolved'), 1000);
 });
 
-// const mergePromise = Promise.any([promise1,promise2,promise3])
-//                     .then((data) =>{
-//                         console.log(data)
-//                     })
-//                     .catch((error) =>{
-//                         console.log(error)
-//                     })
-//                     .finally(() =>{
-//                         console.log("Finally Block is be executed")
-//                     })
+const mergePromise = Promise.any([promise1,promise2,promise3])
+                    .then((data) =>{
+                        console.log(data)
+                    })
+                    .catch((error) =>{
+                        console.log(error)
+                    })
+                    .finally(() =>{
+                        console.log("Finally Block is be executed")
+                    })
 
-// console.log(mergePromise)
+console.log(mergePromise)
 
 // -------------------------------------------------------------------------------
 
@@ -144,14 +144,52 @@ var promise3 = new Promise((resolve,reject) =>{
 // CASE 1. It is a static method 
 // CASE 2. This method takes an array of promises as input and returns a single promise that
 // CASE 3. resolves when all of the promises in the array have resolved, or rejects when any one of the promises rejects.
+// CASE 4. it returns a single promise that resolves when all of the promises in the array have resolved or rejects if any of the promises reject
 
-const allPromise = Promise.all([promise1,promise2,promise3])
-                    .then((data)=>{
-                        console.log(data);
-                    }).
-                    catch((error) =>{
-                        console.log(error);
-                    })
-                    .finally(() =>{
-                        console.log("Finally Block will be executed");
-                    })
+// const allPromise = Promise.all([promise1,promise2,promise3])
+//                     .then((data)=>{
+//                         console.log(data);
+//                     }).
+//                     catch((error) =>{
+//                         console.log(error);
+//                     })
+//                     .finally(() =>{
+//                         console.log("Finally Block will be executed");
+//                     })
+
+// Promise.race
+
+// CASE 1. This method takes an array of promises as input and returns a single promise that
+// CASE 2. resolves when all of the promises in the array have resolved, or rejects when any one of the promises rejects.
+// CASE 3. when you need to proceed as soon as the first operation completes, regardless of whether it was successful or not
+// CASE 4. It will return the promise as soon as any of the promises is either resolve or reject.
+
+// const allPromise = Promise.race([promise1,promise2,promise3])
+//                     .then((data)=>{
+//                         console.log(data);
+//                     }).
+//                     catch((error) =>{
+//                         console.log(error);
+//                     })
+//                     .finally(() =>{
+//                         console.log("Finally Block will be executed");
+//                     })
+
+
+// Promise.allsettled
+
+// CASE 1. This method is similar to Promise.all(), but it waits for all promises to settle (either resolve or reject), 
+// CASE 2. regardless of their result (resolve or reject)
+// CASE 3. It returns an array of objects with the status of each promise.
+
+
+// const allPromise = Promise.allSettled([promise1,promise2,promise3])
+//                     .then((data)=>{
+//                         console.log(data);
+//                     }).
+//                     catch((error) =>{
+//                         console.log(error);
+//                     })
+//                     .finally(() =>{
+//                         console.log("Finally Block will be executed");
+//                     })
