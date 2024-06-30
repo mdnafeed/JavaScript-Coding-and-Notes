@@ -124,18 +124,18 @@ var promise3 = new Promise((resolve,reject) =>{
     setTimeout(() => resolve('Promise 3 resolved'), 1000);
 });
 
-const mergePromise = Promise.any([promise1,promise2,promise3])
-                    .then((data) =>{
-                        console.log(data)
-                    })
-                    .catch((error) =>{
-                        console.log(error)
-                    })
-                    .finally(() =>{
-                        console.log("Finally Block is be executed")
-                    })
+// const mergePromise = Promise.any([promise1,promise2,promise3])
+//                     .then((data) =>{
+//                         console.log(data)
+//                     })
+//                     .catch((error) =>{
+//                         console.log(error)
+//                     })
+//                     .finally(() =>{
+//                         console.log("Finally Block is be executed")
+//                     })
 
-console.log(mergePromise)
+// console.log(mergePromise)
 
 // -------------------------------------------------------------------------------
 
@@ -193,3 +193,6 @@ console.log(mergePromise)
 //                     .finally(() =>{
 //                         console.log("Finally Block will be executed");
 //                     })
+
+// ------------------------------------------------------------------------------------------------
+
